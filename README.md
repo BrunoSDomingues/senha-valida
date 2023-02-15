@@ -4,9 +4,9 @@ A API contida neste repositório foi desenvolvida em Python utilizando o Flask p
 
 ## Estrutura dos arquivos
 
-📦api
- ┣ 📜app.py (contém a estrutura principal da aplicação)
- ┗ 📜schema.py (contém a estrutura de schema usada como entrada)
+* [api](./api)
+  * [app.py](./api/app.py) (contém a estrutura principal da aplicação)
+  * [schema.py](./api/schema.py) (contém a estrutura de schema usada como entrada)
 
 ## Como instalar o projeto
 
@@ -49,8 +49,8 @@ O usuário pode testar as seguintes regras:
 - `minUppercase`: tem pelo menos `x` caracteres maiúsculos
 - `minLowercase`: tem pelo menos `x` caracteres minúsculos
 - `minDigit`: tem pelo menos `x` dígitos (0-9)
-- `minSpecialChars`: tem pelo menos `x` caracteres especiais (os caracteres da seguinte string: `"!@#$%^&*()-+\/{}[]"`)
-- `noRepeted`: não tenha nenhum caractere repetido em sequência ( ou seja, "aab" viola esta condição, mas "aba" não)
+- `minSpecialChars`: tem pelo menos `x` caracteres especiais (os caracteres da string `"!@#$%^&*()-+\/{}[]"`)
+- `noRepeted`: não tenha nenhum caractere repetido em sequência (ou seja, "aab" viola esta condição, mas "aba" não)
 
 A saída gerada tem o formato abaixo (em JSON):
 
@@ -69,5 +69,5 @@ A saída gerada tem o formato abaixo (em JSON):
 
 onde:
 
-- `verify`: indica se a senha está de acordo com as regras (true/false)
-- `noMatch`: indica quais as regras violadas
+- `verify`: indica se a senha está de acordo com as regras (`true`/`false`)
+- `noMatch`: indica quais as regras violadas (em formato de lista)
